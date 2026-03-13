@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,600;0,700;1,600&family=Inter:wght@300;400;500;600&display=swap');
+
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:#F5F0E8;color:#0D1520;font-family:'Inter',sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:rgba(26,80,160,0.2);border-radius:2px}
+
+:root{
+  --font-display:'Cormorant',serif;
+  --font-body:'Inter',sans-serif;
+
+  --cream:#F5F0E8;
+  --ivory:#EDE8DF;
+  --white:#FFFFFF;
+  --ink:#0D1520;
+  --ink-70:rgba(13,21,32,0.7);
+  --ink-40:rgba(13,21,32,0.4);
+  --ink-12:rgba(13,21,32,0.12);
+  --ink-06:rgba(13,21,32,0.06);
+
+  --navy:#0A1628;
+  --navy-mid:#0D2144;
+
+  --blue:#1A50A0;
+  --blue-mid:#2E6CC8;
+  --blue-light:#5B8FE0;
+  --blue-pale:rgba(26,80,160,0.07);
+  --blue-border:rgba(26,80,160,0.18);
+
+  --shadow-sm:0 2px 12px rgba(13,21,32,0.06);
+  --shadow-md:0 8px 32px rgba(13,21,32,0.09);
+  --shadow-lg:0 24px 64px rgba(13,21,32,0.12);
+}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes slideDown{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
+@keyframes pulseDot{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.5;transform:scale(1.6)}}
+@keyframes drawLine{from{width:0}to{width:40px}}
+@keyframes scanLine{0%{top:-2px}100%{top:102%}}
+
+/* ── Global responsive ──────────────────────────── */
+@keyframes spin360{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+
+/* Section padding scales down on smaller screens */
+@media(max-width:1100px){
+  section>div,section>[class]{padding-left:1.5rem!important;padding-right:1.5rem!important}
+}
+
+@media(max-width:900px){
+  /* Grid → single column */
+  [style*="gridTemplateColumns: \"1fr 1fr\""],
+  [style*="grid-template-columns: 1fr 1fr"]{
+    grid-template-columns:1fr!important;
+  }
+  [style*="gridTemplateColumns: \"repeat(3"]{
+    grid-template-columns:1fr 1fr!important;
+  }
+  [style*="gridTemplateColumns: \"repeat(4"]{
+    grid-template-columns:1fr 1fr!important;
+  }
+}
+
+@media(max-width:600px){
+  [style*="gridTemplateColumns: \"repeat(3"]{
+    grid-template-columns:1fr!important;
+  }
+  [style*="gridTemplateColumns: \"1fr 1.6fr""],
+  [style*="gridTemplateColumns: \"1fr 1fr""],
+  [style*="gridTemplateColumns: \"repeat(2"]{
+    grid-template-columns:1fr!important;
+  }
+  /* Reduce section padding on mobile */
+  section{padding-top:64px!important;padding-bottom:64px!important}
+  /* Hide hero right on very small */
+  .hero-right-col{display:none!important}
+}
+
+/* ── Footer responsive ───────────────────────────── */
+@media(max-width:900px){
+  .footer-grid{ grid-template-columns:1fr 1fr !important; gap:40px !important; }
+}
+@media(max-width:600px){
+  .footer-grid{ grid-template-columns:1fr 1fr !important; }
+}
+
+@media(max-width:900px){
+  .faq-layout{
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+  }
+  .faq-sticky-col{
+    position: static !important;
+  }
+}
+
+@media(max-width:900px){
+  /* Industries 3-col → 2-col */
+  .industries-grid{ grid-template-columns:1fr 1fr !important; }
+  /* Stats 4-col → 2-col */
+  .stats-grid{ grid-template-columns:1fr 1fr !important; }
+  /* Features 3-col → 2-col */
+  .features-grid{ grid-template-columns:1fr 1fr !important; }
+  /* How it works 4-col → 2-col */
+  .steps-grid{ grid-template-columns:1fr 1fr !important; }
+  /* Embed demo 2-col → 1-col */
+  .embed-grid{ grid-template-columns:1fr !important; }
+  /* Aerial 2-col → 1-col */
+  .aerial-grid{ grid-template-columns:1fr !important; gap:48px !important; }
+  /* FAQ 2-col → 1-col */
+  .faq-grid{ grid-template-columns:1fr !important; }
+  /* VR tours sidebar stacks below viewer */
+  .vr-layout{ grid-template-columns:1fr !important; }
+  /* Contact page 2-col → 1-col */
+  .contact-layout{ grid-template-columns:1fr !important; gap:40px !important; }
+}
+
+@media(max-width:600px){
+  .industries-grid,
+  .features-grid,
+  .steps-grid{ grid-template-columns:1fr !important; }
+  .stats-grid{ grid-template-columns:1fr 1fr !important; }
+  .hero-right-col{ display:none !important; }
+  /* Testimonials 3-col → 1-col on small screens */
+  .testimonials-grid{ grid-template-columns:1fr !important; }
+  /* Hide side testimonial cards on mobile */
+  .testimonials-grid > *:not(:nth-child(2)){ display:none !important; }
+  /* Form 2-col rows → 1-col */
+  .form-row-2{ grid-template-columns:1fr !important; }
+  /* Contact form card padding */
+  .contact-form-card{ padding:28px 20px !important; }
+  /* CTA buttons stack vertically */
+  .cta-buttons{ flex-direction:column !important; align-items:stretch !important; }
+  .cta-buttons a{ text-align:center; }
+}
+
+/* ── ID-based responsive (targets sections by their existing IDs) ── */
+@media(max-width:900px){
+  #industries > div > div:last-child,
+  #features > div > div:last-child,
+  #how-it-works > div > div:last-child{
+    grid-template-columns: 1fr 1fr !important;
+  }
+  #faq > div > div,
+  #live-demo > div > div:first-child,
+  #aerial > div > div{
+    grid-template-columns: 1fr !important;
+  }
+}
+@media(max-width:600px){
+  #industries > div > div:last-child,
+  #features > div > div:last-child,
+  #how-it-works > div > div:last-child{
+    grid-template-columns: 1fr !important;
+  }
+}
