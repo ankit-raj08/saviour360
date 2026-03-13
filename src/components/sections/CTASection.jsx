@@ -13,7 +13,7 @@ export default function CTASection() {
           <div style={{ width: 40, height: 1, background: "rgba(46,108,200,0.5)" }} />
         </div>
 
-        <h2 style={{ fontFamily: "'Cormorant',serif", fontWeight: 700, fontSize: "clamp(3.5rem,8vw,7.5rem)", letterSpacing: -1.5, lineHeight: 0.9, color: "#FFFFFF", marginBottom: 28 }}>
+        <h2 style={{ fontFamily: "'Cormorant',serif", fontWeight: 700, fontSize: "clamp(3.5rem,8vw,6rem)", letterSpacing: -1.5, lineHeight: 0.9, color: "#FFFFFF", marginBottom: 28 }}>
           See every property<br /><em style={{ color: "#5B8FE0", fontStyle: "italic" }}>before you visit.</em>
         </h2>
 

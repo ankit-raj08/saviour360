@@ -20,8 +20,8 @@ export default function AerialSection() {
               <span style={{ fontFamily: "'Inter',sans-serif", fontSize: 11, fontWeight: 500, letterSpacing: 3.5, textTransform: "uppercase", color: "rgba(91,143,224,0.9)" }}>Aerial & Helicopter View</span>
             </div>
 
-            <h2 style={{ fontFamily: "'Cormorant',serif", fontWeight: 700, fontSize: "clamp(2.8rem, 5vw, 5.5rem)", color: "#FFFFFF", lineHeight: 0.92, letterSpacing: -0.5, marginBottom: 28 }}>
-              Buyers don't just<br />buy rooms.<br /><em style={{ color: "#5B8FE0", fontStyle: "italic" }}>They buy location.</em>
+            <h2 style={{ fontFamily: "'Cormorant',serif", fontWeight: 700, fontSize: "clamp(2.8rem, 5vw, 3rem)", color: "#FFFFFF", lineHeight: 0.92, letterSpacing: -0.5, marginBottom: 28 }}>
+              Buyers don't just buy rooms.<br /><em style={{ color: "#5B8FE0", fontStyle: "italic" }}>They buy location.</em>
             </h2>
 
             <p style={{ fontFamily: "'Inter',sans-serif", fontSize: 14, fontWeight: 300, color: "rgba(255,255,255,0.42)", lineHeight: 1.9, maxWidth: 460, marginBottom: 40 }}>
