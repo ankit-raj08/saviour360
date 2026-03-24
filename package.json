@@ -1,0 +1,31 @@
+{
+  "name": "saviour360-cms",
+  "version": "1.0.0",
+  "description": "Payload CMS backend for Saviour360",
+  "license": "MIT",
+  "main": "src/server.js",
+  "scripts": {
+    "dev": "cross-env PAYLOAD_CONFIG_PATH=payload.config.js nodemon src/server.js",
+    "build": "cross-env PAYLOAD_CONFIG_PATH=payload.config.js payload build",
+    "start": "cross-env PAYLOAD_CONFIG_PATH=payload.config.js node src/server.js",
+    "seed": "cross-env PAYLOAD_CONFIG_PATH=payload.config.js node src/seed.js"
+  },
+  "dependencies": {
+    "payload": "2.15.0",
+    "express": "^4.18.2",
+    "@payloadcms/bundler-webpack": "^1.0.8",
+    "@payloadcms/db-mongodb": "^1.7.0",
+    "@payloadcms/richtext-slate": "^1.5.0",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.4.5",
+    "cloudinary": "^1.41.3",
+    "multer-storage-cloudinary": "^4.0.0",
+    "multer": "^1.4.5-lts.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
